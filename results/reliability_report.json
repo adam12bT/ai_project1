@@ -1,0 +1,16 @@
+{
+  "n_calibration_items": 8,
+  "judge_human_agreement_pct": 100.0,
+  "cohens_kappa": 1.0,
+  "verdict_stability_flip_rate_pct": 0.0,
+  "verbosity_bias_rate_pct": 0.0,
+  "position_bias_rate_pct": 0.0,
+  "n_position_bias_pairs": 4,
+  "notes": {
+    "agreement": "Pct of calibration items where judge verdict == human verdict.",
+    "kappa": "Chance-corrected agreement. <0.4 weak, 0.4-0.6 moderate, 0.6-0.8 substantial, >0.8 strong.",
+    "stability": "Pct of a 20-item subsample where re-grading the SAME explanation flips the verdict. High = judge is noisy, not just biased.",
+    "verbosity_bias": "Of items the judge already passed, pct whose score went UP after adding content-free filler. Should be near 0.",
+    "position_bias": "Requires calibration_set.jsonl to contain a pass/fail pair per query (same 'query' value, one human_verdict=pass, one=fail). Pct of pairs where swapping which slot (A/B) the good explanation sits in changes which one the judge prefers. Should be near 0."
+  }
+}
